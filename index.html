@@ -1,0 +1,55 @@
+<!doctype html>
+<!--
+  CUTTING CHAI
+  3-D store diorama, part of the Cutting Chai branding project.
+
+  Files
+    index.html  → structure: the page markup (this file)
+    style.css   → look: colours, type, layout of the overlay UI
+    script.js   → behaviour: builds the 3-D store with three.js
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Cutting Chai</title>
+  <meta name="description" content="A 3-D diorama of Cutting Chai, a fictional Mumbai-style chai stall in Jackson Heights, Queens.">
+
+  <!-- Brand typefaces: Rozha One (display + Hindi), Playfair Display (text) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rozha+One&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===== 3-D canvas (three.js draws into this) ===== -->
+<div id="stage" aria-label="3-D model of the Cutting Chai store. Drag to orbit, scroll or pinch to zoom." role="img"></div>
+
+<header class="band">
+  <div class="brand"><b>CUTTING CHAI</b><span>कटिंग चाय</span></div>
+  <div class="meta">Jackson Heights, Queens · fictional store <span class="hint">· drag to orbit, scroll to zoom</span></div>
+</header>
+
+<aside class="note" id="note" aria-live="polite">
+  <h2 id="noteTitle">The street</h2>
+  <p id="noteText">A narrow, loud, hand-painted tapri. The pickup window faces the sidewalk, with stools outside and the steam visible from the corner.</p>
+</aside>
+
+<nav class="views" aria-label="Camera views">
+  <button type="button" data-view="street" aria-pressed="true">Street</button>
+  <button type="button" data-view="window" aria-pressed="false">Order window</button>
+  <button type="button" data-view="counter" aria-pressed="false">Chai counter</button>
+  <button type="button" data-view="standing" aria-pressed="false">Standing bar</button>
+  <button type="button" data-view="retail" aria-pressed="false">Retail wall</button>
+  <button type="button" data-view="top" aria-pressed="false">Floor plan</button>
+</nav>
+<div id="err">The 3-D view needs WebGL, which this browser has turned off.</div>
+
+<!-- ===== Libraries, then our script ===== -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
