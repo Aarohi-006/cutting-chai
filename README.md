@@ -3,7 +3,7 @@
 A 3-D diorama of **Cutting Chai**, a fictional Mumbai-style chai stall in Jackson Heights, Queens.
 Part of my Core 3 final branding project, *Cutting Chai*: half a glass, full conversation (एक कटिंग, दो बातें).
 
-**Live:** https://YOUR-USERNAME.github.io/cutting-chai/
+**Live:** https://aarohi-006.github.io/cutting-chai/
 
 ## What it is
 - Built with [three.js](https://threejs.org) (r128)
